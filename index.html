@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style rel="stylesheet" type="text/css" href="./style.css"></style>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .header{
+        background-color: black;
+        height:60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        font-size: 35px;
+        color:white;
+        text-decoration: none;
+        margin:0px 100px;
+    }
+    .header ul{
+        display: flex;
+    }
+    .header ul li{
+        list-style: none;;
+        margin:0px 10px;
+    }
+    .header ul li a{
+        text-decoration: none;
+        color:white;
+        display: block;
+        height:60px;
+        line-height: 60px;
+        padding:0px 10px;
+    }
+    .header ul li a:hover{
+        background-color: white;
+        color:black;
+    }
+    .bars{
+        display: none;
+        position: absolute;
+        right:10%;
+       top:2%;
+    }
+    .bars div{
+        width:35px;
+        height:5px;
+        margin:5px 0px;
+        background-color: white;
+    }
+    #check{
+        position:relative;
+        display: none;
+    }
+    @media screen and (max-width:992px){
+     .header ul{
+         position: fixed;
+         background-color: blueviolet;
+         top:60px;
+         height:100vh;
+         left:-100%;
+         width:100%;
+         text-align: center;
+         display: block;
+         transition: all 0.5s ease;
+     }
+     .header ul li a{
+         width:100%;
+     }
+     .header ul li a:hover{
+        background-color: white;
+        color:black;
+        width: 100%;;
+
+     }
+     .bars{
+         display: block;
+     }
+     #check:checked ~ ul{
+         left:0%;
+     }
+    }
+    .wrapper h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .img-area{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+     
+    }
+    .single-img{
+        border:1px solid;
+        max-width: 300px;
+        height: 300px;
+        padding:0px 20px 20px;
+        align-items: center;
+    }
+    .single-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .img-box{
+        border:1px solid;
+     margin:60px 10px;
+    }
+    .img-box h3{
+        text-align: center;
+    }
+  
+</style>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Flyeraa</a>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <div class="bars">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <div class="wrapper">
+            <h1>Products</h1>
+            <div class="img-area">
+                <div class="single-img">
+                   <div class="img-box">
+                    <img src="./images/product1.jfif"/>
+                    <div class="product-info">
+                        <h3>New Version</h3>
+                        <h3>$2000</h3>
+                        <button style="width:100%;padding:5px">Cart</button>
+                   </div>
+                    </div>
+                </div>
+                <div class="single-img"><img src="./images/product2.jfif"/></div>
+                <div class="single-img"><img src="./images/product3.jfif"/></div>
+                <div class="single-img"><img src="./images/product4.jfif"/></div>
+                <div class="single-img"><img src="./images/product5.jfif"/></div>
+                <div class="single-img"><img src="./images/product6.jfif"/></div>
+                
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
